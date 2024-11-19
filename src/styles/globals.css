@@ -1,0 +1,66 @@
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    background-color: #007bff;  /* Bright blue color */
+
+    left: -250px; /* Start with the sidebar hidden */
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    left: 0; /* Slide sidebar in when it's visible */
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #007bff;
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 10px 20px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+.content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.content-shifted {
+    margin-left: 250px; /* Shift content when sidebar is visible */
+}
+
+/* Mobile Menu Button */
+.d-lg-none {
+    display: block;
+}
+
+/* Desktop version (sidebar hidden by default) */
+@media (min-width: 992px) {
+    .sidebar {
+        left: 0;
+    }
+
+    .content-shifted {
+        margin-left: 250px;
+    }
+}
+.profile-icon {
+    width: 40px;       /* Size of the circle */
+    height: 40px;      /* Size of the circle */
+    border-radius: 50%; /* To make it a circle */
+    background-color: #007bff; /* Circle background color */
+    display: flex;      /* Use flexbox for centering text */
+    align-items: center;  /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    font-size: 18px;   /* Font size for "SA" text */
+    font-weight: bold; /* Make text bold */
+}
